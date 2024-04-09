@@ -1,0 +1,43 @@
+{
+	"applications": [
+		{
+            "name" : "applications",
+            "order" : 1,
+            "entries": [
+                {
+                    "order" : 0,
+                    "name": "Radarr",
+                    "icon": "cbi:radarr",
+                    "url": "https://192.168.0.172:7878"
+                },
+                {
+					"order": 1,
+					"name": "Sonarr",
+					"icon": "cbi:sonarr",
+					"url": "https://192.168.0.172:8989"
+				}
+            ]
+        },
+        {
+			"name": "media",
+			"order": 0,
+			"entries": [
+				{
+					"order": 0,
+					"name": "Radarr",
+					"icon": "cbi:radarr",
+					"url": "https://192.168.0.172:7878"
+				},
+				{
+					"order": 1,
+					"name": "Sonarr",
+					"icon": "cbi:sonarr",
+					"url": "https://192.168.0.172:8989"
+				}
+			]
+		}
+    ],
+	"bookmarks": {
+
+	}
+}

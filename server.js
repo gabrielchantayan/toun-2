@@ -5,7 +5,7 @@ import cors from 'cors';
 import initialize from './utils/server/initialize.js';
 
 // Set up on port
-const port = process.env.PORT || 80;
+const port = process.env.PORT || 3080;
 
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
@@ -32,11 +32,16 @@ const main = () => {
 	app.use(express.urlencoded({ limit: '50mb' }));
 	app.use(express.static('public'));
 	app.use(express.urlencoded({ extended: true }));
+		app.use('/api/apps', routes.apps);
+
+
 
 	// Listen to API routes
-	for (let key of Object.keys(routes)) {
-		app.use(`/api/${key}`, routes[key]);
-	}
+	// for (let key of Object.keys(routes)) {
+	// 	app.use(`/api/${key}`, routes[key]);
+
+	// }
+
 
 	// If we are in prod, use the build folder
 	if (process.env.NODE_ENV == 'prod') {

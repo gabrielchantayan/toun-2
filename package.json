@@ -1,8 +1,8 @@
 {
-	"name": "react_express_boilerplate",
-	"description": "React Express Boilerplate",
+	"name": "toun",
+	"description": "Toun",
 	"author": "Gabriel Chantayan",
-	"version": "0.0.0",
+	"version": "b_2.0.0",
 	"type": "module",
 	"main": "server.js",
 	"directories": {

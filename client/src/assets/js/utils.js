@@ -1,10 +1,30 @@
+import { defaultLocale } from "./locale";
+
 // Gets a cookie
 const getCookie = (key) => {
 	var b = document.cookie.match('(^|;)\\s*' + key + '\\s*=\\s*([^;]+)');
 	return b ? b.pop() : '';
 };
 
+// import * as locale from './localeManager.js'; // Import Locale manager
 
+// Date function for main page
+const date = () => {
+	let currentDate = new Date();
+	let dateOptions = {
+		weekday: 'long',
+		year: 'numeric',
+		month: 'long',
+		day: 'numeric',
+	};
+
+	// Set date to locale
+	// const loc = await locale.getLocale();
+	const loc = defaultLocale
+
+	let date = currentDate.toLocaleDateString(loc, dateOptions);
+	return date;
+};
 
 const greet = () => {
 	let currentTime = new Date();
@@ -14,15 +34,15 @@ const greet = () => {
 		case 8:
 		case 0:
 		case 1:
-			return 'Good night!';
+			return 'goodNight';
 		case 2:
 		case 3:
-			return 'Good morning!';
+			return 'goodMorning';
 		case 4:
 		case 5:
-			return 'Good afternoon!';
+			return 'goodAfternoon';
 		case 6:
-			return 'Good evening!';
+			return 'goodEvening';
 		default:
 			return 'Hello!';
 	}
@@ -47,4 +67,4 @@ const makeFile = (fileData, fileName, fileType) => {
 	window.URL.revokeObjectURL(fileURL);
 };
 
-export { getCookie, greet, makeFile };
+export { getCookie, greet, makeFile, date };

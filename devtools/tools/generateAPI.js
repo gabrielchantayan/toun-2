@@ -115,7 +115,7 @@ import ${route} from '../controllers/${route}/index.js';
 		file += `
 // ${data.name}
 // ${data.description}
-router.${data.type.toLowerCase()}('${
+router.${data.type.toLowerCase()}('/${
 			data.hasOwnProperty('endpoint') ? data.endpoint : endpoint
 		}', (req, res) => {
     return ${route}.${endpoint}(req, res);

@@ -16,7 +16,6 @@ const router = createBrowserRouter([
 		path: '/',
 		element: (
 			<>
-				<AppBar />
 				<Outlet />
 			</>
 		),
@@ -24,17 +23,14 @@ const router = createBrowserRouter([
 			{
 				index: true,
 				element: <pages.Homepage />,
-			},
-			{
-				path: '/page1',
-				element: <pages.PageOne />,
-			},
+			}
 		],
 	},
 ]);
 
 function App() {
-	return <RouterProvider router={router} />;
+	// return <RouterProvider router={router} />;
+	return <pages.Homepage />;
 }
 
 export default App;

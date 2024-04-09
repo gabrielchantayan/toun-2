@@ -1,5 +1,5 @@
 import axios from 'axios';
-import config from '../../config.json';
+// import config from '../../config.json';
 
 let host = window.location.hostname;
 let protocol = window.location.protocol;
@@ -11,7 +11,7 @@ const baseURL = `${protocol}//${host}${port}/api/`;
 
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
-console.log(config);
+// console.log(config);
 
 /**
  * API GET

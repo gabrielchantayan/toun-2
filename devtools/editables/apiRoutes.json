@@ -1,27 +1,12 @@
 {
-	"exampleRoutes": {
-		"getExample": {
-			"name": "GET Example",
-			"description": "Example GET Route",
+	"apps": {
+		"getApps": {
+			"name": "Get applications",
+			"description": "Gets a list of all applications and bookmarks",
 			"params": [],
 			"type": "GET",
-			"primaryFunctionFile": "utils/example/example.js",
-			"primaryFunction": "getExample"
-		},
-		"postExample": {
-			"name": "POST Example",
-			"description": "Example POST Route",
-			"type": "POST",
-			"primaryFunctionFile": "utils/example/example.js",
-			"primaryFunction": "postExample"
-		},
-		"alternativeEndpointExample": {
-			"name": "Alternative Example",
-			"description": "This route uses an alternative endpoint",
-			"endpoint": "foo/bar",
-			"type": "POST",
-			"primaryFunctionFile": "utils/example/example.js",
-			"primaryFunction": "getExample"
+			"primaryFunctionFile": "utils/apps/api.js",
+			"primaryFunction": "getApplications"
 		}
 	},
 	"accounts": {
