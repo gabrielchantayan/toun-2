@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { t } from '../assets/js/locale.js';
 import { date, greet } from '../assets/js/utils.js';
 import { useCookies } from 'react-cookie';
 import * as api from '../assets/js/api.js';
 import ApplicationSection from '../components/ApplicationSection.js';
+import { applyTheme } from '../assets/js/themes.js';
+import ModalButton from '../components/ModalButton.js';
 
 export default function PageOne(params) {
 	const [username, setUsername] = React.useState(''); // Username
@@ -18,10 +19,10 @@ export default function PageOne(params) {
 
 	const [locale, setLocale] = React.useState();
 
+	const [eatShit, fuckYouReact] = React.useState(false); // Any cookies
+
 	const buildAppMenu = (data) => {
-		return <ApplicationSection
-					data={data}
-				/>
+		return <ApplicationSection data={data} />;
 	};
 
 	// Get apps
@@ -31,7 +32,7 @@ export default function PageOne(params) {
 		// Get apps from API
 		let ret = await api.get(['apps', 'getApps']);
 
-		let appSectionBuilder = []
+		let appSectionBuilder = [];
 
 		// Sort the application sections by order
 		ret.applications.sort((a, b) => {
@@ -39,7 +40,7 @@ export default function PageOne(params) {
 		});
 
 		// Iterate through application sections
-		for (const[key, data] of Object.entries(ret.applications)) {
+		for (const [key, data] of Object.entries(ret.applications)) {
 			// Sort each application section entry
 			data['entries'].sort((a, b) => {
 				return a.order - b.order;
@@ -47,13 +48,14 @@ export default function PageOne(params) {
 
 			appSectionBuilder.push(buildAppMenu(data));
 		}
-		
-		setAppSection(appSectionBuilder)
+
+		setAppSection(appSectionBuilder);
 		setAppsJSON(ret);
 		setDisplayPage(true);
 	};
 
 	useEffect(() => {
+		applyTheme();
 		getApps();
 	}, []);
 
@@ -64,9 +66,9 @@ export default function PageOne(params) {
 				<p id='greet'>{t(greet())}</p>
 			</div>
 
-			<div class='section'>
-				{appSection}
-			</div>
+			<div class='section'>{appSection}</div>
+
+			<ModalButton />
 		</div>
 	);
 }
