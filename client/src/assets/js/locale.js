@@ -2,22 +2,25 @@
 import locale from '../locale.json'
 import { getCookie } from './utils'
 
-const defaultLocale = 'hy-AM'
 
-const getLocale = () => {
+const defaultLocale = 'fr-FR'
 
+
+
+const getLocales = () => {
+    return locale['info']['locales']
 }
 
 const t = (text) => {
-    return locale[getCookie('locale') || defaultLocale ][text] || `[[${text}]]`;
+    return locale[localStorage.getItem('locale') || defaultLocale ][text] || `[[${text}]]`;
 }
 
 const tNoBracket = (text) => {
-	return locale[getCookie('locale') || defaultLocale][text] || `${text}`;
+	return locale[localStorage.getItem('locale') || defaultLocale][text] || `${text}`;
 };
 
 const getLocaleMappings = (text) => {
 	return locale['info']['locales'];
 };
 
-export { t, tNoBracket, getLocaleMappings, defaultLocale };
+export { t, tNoBracket, getLocaleMappings, defaultLocale, getLocales };
