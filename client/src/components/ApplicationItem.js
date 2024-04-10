@@ -1,12 +1,17 @@
 import { Icon } from '@iconify/react';
 
 export default function ApplicationItem(props) {
+
+	const navigate = () => {
+		window.location.href = props.data.url;
+	};
+
 	return (
 		// <div id={props.data.name}>
 		// 	<h2 class="applicationName">{props.data.name}</h2>
 		// </div>
 
-		<div className='applicationContainer'>
+		<div className='applicationContainer' onClick={navigate}>
 			<div className='applicationIcon'>
 				<Icon className='icon' icon={props.data.icon} />
 			</div>
@@ -14,7 +19,7 @@ export default function ApplicationItem(props) {
 				<a className='applicationName' href={props.data.url}>
 					{props.data.name}
 				</a>
-				<span id='app-address'>{props.data.url}</span>
+				<span className='applicationLink'>{props.data.url}</span>
 			</div>
 		</div>
 	);

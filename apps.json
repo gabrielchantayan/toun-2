@@ -4,19 +4,37 @@
             "name" : "applications",
             "order" : 1,
             "entries": [
-                {
-                    "order" : 0,
-                    "name": "Radarr",
-                    "icon": "cbi:radarr",
-                    "url": "https://192.168.0.172:7878"
-                },
-                {
+				{
+					"order": 0,
+					"name": "Radarr",
+					"icon": "cbi:radarr",
+					"url": "https://192.168.0.172:7878"
+				},
+				{
 					"order": 1,
 					"name": "Sonarr",
 					"icon": "cbi:sonarr",
 					"url": "https://192.168.0.172:8989"
+				},
+				{
+					"order": 1,
+					"name": "Lidarr",
+					"icon": "cbi:sonarr",
+					"url": "https://192.168.0.172:8989"
+				},
+				{
+					"order": 1,
+					"name": "Plex",
+					"icon": "cbi:plex",
+					"url": "https://192.168.0.172:8989"
+				},
+				{
+					"order": 1,
+					"name": "Prowlarr",
+					"icon": "cbi:prowlarr",
+					"url": "https://192.168.0.172:8989"
 				}
-            ]
+			]
         },
         {
 			"name": "media",

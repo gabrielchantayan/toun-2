@@ -1,14 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { tNoBracket } from '../assets/js/locale';
 import ApplicationItem from './ApplicationItem';
 
 export default function ApplicationSection(props) {
-	const [appSection, setAppSection] = React.useState([]); // Password
-
-
-	const buildAppMenu = (data) => {
-		return <ApplicationSection data={data} />;
-	};
 
 	return (
 		<div id={props.data.name}>
