@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
-import { t, tNoBracket } from '../assets/js/locale';
+import React from 'react';
+import { t } from '../../assets/js/locale';
 import ThemeButton from './ThemeButton';
-import themes from '../assets/styles/themes.json';
+import themes from '../../assets/styles/themes.json';
 
 export default function ThemeButtonSection(props) {
 

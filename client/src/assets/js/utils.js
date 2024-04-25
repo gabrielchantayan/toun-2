@@ -1,4 +1,7 @@
-import { defaultLocale } from "./locale";
+import { getLocale } from './locale';
+
+
+const protocolRegex = /^.*?:\/\//
 
 // Gets a cookie
 const getCookie = (key) => {
@@ -20,7 +23,7 @@ const date = () => {
 
 	// Set date to locale
 	// const loc = await locale.getLocale();
-	const loc = defaultLocale
+	const loc = getLocale();
 
 	let date = currentDate.toLocaleDateString(loc, dateOptions);
 	return date;
@@ -67,4 +70,13 @@ const makeFile = (fileData, fileName, fileType) => {
 	window.URL.revokeObjectURL(fileURL);
 };
 
-export { getCookie, greet, makeFile, date };
+/**
+ * Strips a protocol from a link
+ * @param {String} link Link to strip from
+ * @returns {String}
+ */
+const stripProtocol = (link) => {
+	return link.replace(protocolRegex, '');
+}
+
+export { getCookie, greet, makeFile, date, stripProtocol };

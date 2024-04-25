@@ -1,4 +1,5 @@
 import { readFile, writeFile } from 'fs/promises';
+import { successHandler } from '../misc/miscUtils.js';
 
 
 const getApplications = async () => {
@@ -6,7 +7,11 @@ const getApplications = async () => {
 	const appsFile = JSON.parse(appsFileRAW);
 
 
-    return(appsFile);
+    return(successHandler(true,null,appsFile));
 };
 
-export { getApplications };
+const updateApps = async () => {
+
+}
+
+export { getApplications, updateApps };

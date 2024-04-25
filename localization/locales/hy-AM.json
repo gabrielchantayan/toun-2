@@ -3,7 +3,7 @@
 		"version": 1,
 		"locale": "hy-AM",
 		"name": "Հայերեն",
-		"fallbacks": ["en-US", "fr-FR"],
+		"fallbacks": [],
 		"authors": ["Gabriel Chantayan"]
 	},
     "entries" : {
@@ -42,6 +42,14 @@
 		"theme_pumpkin": "Դդում",
 		"theme_onedark": "OneDark",
 		"theme_mint": "Անանուխ",
+		"theme_timberwolf": "Մոխրագույն գայլ",
+		"theme_vampire": "Արնախումներ",
+		"theme_latte": "Լատտե",
+		"theme_forest": "Անտառ",
+		"theme_plum": "Շլոր",
+		"theme_roseQuartz": "Վարդագույն քվարց",
+		"theme_khaki": "Խակի",
+		"server": "Սերվեր",
 		"media": "Մեդիա",
 		"communication": "Հաղորդակցություն",
 		"cloud": "Ամպային",

@@ -1,4 +1,5 @@
 import { Icon } from '@iconify/react';
+import { stripProtocol } from '../assets/js/utils';
 
 export default function ApplicationItem(props) {
 
@@ -19,7 +20,7 @@ export default function ApplicationItem(props) {
 				<a className='applicationName' href={props.data.url}>
 					{props.data.name}
 				</a>
-				<span className='applicationLink'>{props.data.url}</span>
+				<span className='applicationLink'>{stripProtocol(props.data.url)}</span>
 			</div>
 		</div>
 	);

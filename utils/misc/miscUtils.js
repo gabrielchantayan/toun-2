@@ -11,7 +11,7 @@ const successHandler = (success, message, data) => {
 		success: success || false,
 	};
 
-	if (message != null && data != undefined) ret['message'] = message;
+	if (message != null && message != undefined) ret['message'] = message;
 	if (data != null && data != undefined) ret['data'] = data;
 
 	return ret;

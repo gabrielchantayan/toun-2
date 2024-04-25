@@ -1,12 +1,12 @@
 {
-    "info" : {
+	"info": {
 		"version": 1,
 		"locale": "fr-FR",
 		"name": "Français (FR)",
-		"fallbacks": ["en-US"],
+		"fallbacks": [],
 		"authors": ["Gabriel Chantayan"]
 	},
-    "entries" : {
+	"entries": {
 		"toun": "Toun",
 		"applications": "Applications",
 		"bookmarks": "Signets",
@@ -42,6 +42,14 @@
 		"theme_pumpkin": "Citrouille",
 		"theme_onedark": "OneDark",
 		"theme_mint": "Menthe",
+		"theme_timberwolf": "Loup gris",
+		"theme_vampire": "Vampire",
+		"theme_latte": "Latté",
+		"theme_forest": "Forêt",
+		"theme_plum": "Prune",
+		"theme_roseQuartz": "Quartz Rose",
+		"theme_khaki": "Kaki",
+		"server": "Serveur",
 		"media": "Média",
 		"communication": "Communication",
 		"cloud": "Nuage",

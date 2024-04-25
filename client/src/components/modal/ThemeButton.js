@@ -1,6 +1,6 @@
 import { Icon } from '@iconify/react';
-import { t } from '../assets/js/locale';
-import { setTheme } from '../assets/js/themes';
+import { t } from '../../assets/js/locale';
+import { setTheme } from '../../assets/js/themes';
 
 export default function ThemeButton(props) {
 

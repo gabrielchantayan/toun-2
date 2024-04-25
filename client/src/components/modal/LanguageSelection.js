@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { getLocales, t, tNoBracket } from '../assets/js/locale';
+import { getLocales, t, tNoBracket } from '../../assets/js/locale';
 import ThemeButton from './ThemeButton';
-import themes from '../assets/styles/themes.json';
+import themes from '../../assets/styles/themes.json';
 
 export default function LanguageSelection(props) {
 	let selectedLang = localStorage.getItem('locale') || 'en-US';

@@ -7,6 +7,13 @@
 			"type": "GET",
 			"primaryFunctionFile": "utils/apps/api.js",
 			"primaryFunction": "getApplications"
+		},
+		"updateApps": {
+			"name": "Update Apps",
+			"description": "Updates apps list",
+			"type": "POST",
+			"primaryFunctionFile": "utils/apps/api.js",
+			"primaryFunction": "updateApps"
 		}
 	},
 	"accounts": {
@@ -16,27 +23,6 @@
 			"type": "POST",
 			"primaryFunctionFile": "utils/accounts/accounts.js",
 			"primaryFunction": "login"
-		},
-		"createAccount": {
-			"name": "Create Account",
-			"description": "Creates an account given a username and hashed password.",
-			"type": "POST",
-			"primaryFunctionFile": "utils/accounts/accounts.js",
-			"primaryFunction": "createAccount"
-		},
-		"getUserPerms": {
-			"name": "Get User Permissions",
-			"description": "Gets a user's permissions, returned as an array",
-			"type": "POST",
-			"primaryFunctionFile": "utils/accounts/permissions.js",
-			"primaryFunction": "getUserPermissions"
-		},
-		"updateAccount": {
-			"name": "Update Account",
-			"description": "Update information about a user's account",
-			"type": "POST",
-			"primaryFunctionFile": "utils/accounts/accounts.js",
-			"primaryFunction": "updateAccount"
 		}
 	}
 }

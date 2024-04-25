@@ -10,7 +10,11 @@ const port = process.env.PORT || 3080;
 process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = 0;
 
 // Main function
-const main = () => {
+const main = async () => {
+
+
+	await initialize();
+
 	// Setup express webserver
 	const app = express();
 
@@ -32,15 +36,15 @@ const main = () => {
 	app.use(express.urlencoded({ limit: '50mb' }));
 	app.use(express.static('public'));
 	app.use(express.urlencoded({ extended: true }));
-		app.use('/api/apps', routes.apps);
+		// app.use('/api/apps', routes.apps);
 
 
 
 	// Listen to API routes
-	// for (let key of Object.keys(routes)) {
-	// 	app.use(`/api/${key}`, routes[key]);
+	for (let key of Object.keys(routes)) {
+		app.use(`/api/${key}`, routes[key]);
 
-	// }
+	}
 
 
 	// If we are in prod, use the build folder

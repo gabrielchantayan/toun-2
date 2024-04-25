@@ -52,7 +52,6 @@ const generateControllerFile = async (route, endpoint, data) => {
 	let file = 
 `import asyncWrapper from '../../middleware/asyncWrapper.js';
 import { ${data.primaryFunction} as mainFunction } from '../../${data.primaryFunctionFile}';
-import { successHandler } from '../../utils/misc/miscUtils.js';
 
 // ${data.name}
 // ${data.description}
@@ -60,7 +59,7 @@ const ${endpoint} = asyncWrapper(async (req, res) => {
 
     const ret = await mainFunction(req);
 
-    res.status(200).json(successHandler(true, null, ret));
+    res.status(200).json(ret);
 
 });
 

@@ -9,5 +9,9 @@ router.get('/getApps', (req, res) => {
     return apps.getApps(req, res);
 });
 
-
+// Update Apps
+// Updates apps list
+router.post('/updateApps', (req, res) => {
+    return apps.updateApps(req, res);
+});
 export default router;

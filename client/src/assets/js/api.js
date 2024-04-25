@@ -20,13 +20,13 @@ axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
  */
 const get = (call) => {
 	const request = axios.get(`${baseURL}${call.join('/')}`);
-	return request.then((response) => response.data.data);
+	return request.then((response) => response.data);
 };
 
 // API get function
 const post = (call, data) => {
 	const request = axios.post(`${baseURL}${call.join('/')}`, data);
-	return request.then((response) => response.data.data);
+	return request.then((response) => response.data);
 };
 
 export { get, post };

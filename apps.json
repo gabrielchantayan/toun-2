@@ -2,60 +2,146 @@
 	"applications": [
 		{
             "name" : "applications",
-            "order" : 1,
+            "order" : 0,
             "entries": [
 				{
+					"order": 1,
+					"name": "Actual",
+					"icon": "mdi:bank",
+					"url": "http://actual.internal"
+				},
+				{
 					"order": 0,
-					"name": "Radarr",
-					"icon": "cbi:radarr",
-					"url": "https://192.168.0.172:7878"
+					"name": "Code Server",
+					"icon": "mdi:code-braces-box",
+					"url": "http://codeserver.internal"
 				},
 				{
 					"order": 1,
-					"name": "Sonarr",
-					"icon": "cbi:sonarr",
-					"url": "https://192.168.0.172:8989"
+					"name": "Grafana",
+					"icon": "mdi:graph-line",
+					"url": "http://grafana.internal"
 				},
 				{
-					"order": 1,
-					"name": "Lidarr",
-					"icon": "cbi:sonarr",
-					"url": "https://192.168.0.172:8989"
-				},
-				{
-					"order": 1,
-					"name": "Plex",
-					"icon": "cbi:plex",
-					"url": "https://192.168.0.172:8989"
-				},
-				{
-					"order": 1,
-					"name": "Prowlarr",
-					"icon": "cbi:prowlarr",
-					"url": "https://192.168.0.172:8989"
+					"order": 3,
+					"name": "Grafana",
+					"icon": "mdi:graph-line",
+					"url": "http://grafana.internal"
 				}
 			]
         },
         {
 			"name": "media",
+			"order": 1,
+			"entries": [
+                {
+					"order": 1,
+					"name": "Radarr",
+					"icon": "mdi:movie-search",
+					"url": "http://radarr.internal"
+				},
+				{
+					"order": 2,
+					"name": "Sonarr",
+					"icon": "mdi:tv",
+					"url": "http://sonarr.internal"
+				},
+				{
+					"order": 3,
+					"name": "Lidarr",
+					"icon": "mdi:headphones",
+					"url": "http://lidarr.internal"
+				},
+				{
+					"order": 0,
+					"name": "Plex",
+					"icon": "mdi:plex",
+					"url": "http://plex.internal"
+				},
+				{
+					"order": 4,
+					"name": "Prowlarr",
+					"icon": "ic:baseline-list",
+					"url": "http://prowlarr.internal"
+				}
+			]
+		},
+        {
+            "name" : "server",
+            "order" : 2,
+            "entries": [
+				{
+					"order": 2,
+					"name": "Wiki.JS",
+					"icon": "mdi:wikipedia",
+					"url": "http://wikijs.internal"
+				},
+				{
+					"order": 0,
+					"name": "Proxmox",
+					"icon": "mdi:server-network",
+					"url": "http://proxmox.internal"
+				},
+				{
+					"order": 1,
+					"name": "Grafana",
+					"icon": "mdi:graph-line",
+					"url": "http://grafana.internal"
+				},
+				{
+					"order": 3,
+					"name": "PiHole",
+					"icon": "simple-icons:pihole",
+					"url": "http://pihole.internal"
+				}
+			]
+        }
+    ],
+	"bookmarks": [
+        
+        {
+			"name": "communication",
 			"order": 0,
 			"entries": [
 				{
 					"order": 0,
-					"name": "Radarr",
-					"icon": "cbi:radarr",
-					"url": "https://192.168.0.172:7878"
+					"name": "Discord",
+					"url": "https://discord.com"
 				},
 				{
 					"order": 1,
-					"name": "Sonarr",
-					"icon": "cbi:sonarr",
-					"url": "https://192.168.0.172:8989"
+					"name": "Gmail",
+					"url": "https://gmail.com"
+				},
+				{
+					"order": 1,
+					"name": "WhatsApp",
+					"url": "https://web.whatsapp.com"
+				}
+			]
+		},
+
+        {
+			"name": "media",
+			"order": 1,
+			"entries": [
+				{
+					"order": 0,
+					"name": "Youtube",
+					"url": "https://youtube.com"
+				},
+				{
+					"order": 1,
+					"name": "Netflix",
+					"url": "https://netflix.com"
+				},
+				{
+					"order": 2,
+					"name": "Spotify",
+					"url": "https://spotify.com"
 				}
 			]
 		}
-    ],
-	"bookmarks": {
-
-	}
+    
+	]
 }

@@ -1,11 +1,11 @@
 {
-    "info" : {
+	"info": {
 		"version": 1,
 		"locale": "en-US",
 		"name": "English (US)",
 		"authors": ["Gabriel Chantayan"]
 	},
-    "entries" : {
+	"entries": {
 		"toun": "Toun",
 		"applications": "Applications",
 		"bookmarks": "Bookmarks",
@@ -21,6 +21,8 @@
 		"prefix": "Prefix",
 		"langSettings": "Language Settings",
 		"adminLogin": "Admin Login",
+		"adminSettings": "Admin Settings",
+		"login": "Login",
 		"editDefault": "Edit default settings",
 		"username": "Username",
 		"password": "Password",
@@ -42,6 +44,14 @@
 		"theme_pumpkin": "Pumpkin",
 		"theme_onedark": "OneDark",
 		"theme_mint": "Mint",
+		"theme_vampire": "Vampire",
+		"theme_latte": "Latte",
+		"theme_forest": "Forest",
+		"theme_timberwolf": "Timberwolf",
+		"theme_plum": "Plum",
+		"theme_roseQuartz": "Rose Quartz",
+		"theme_khaki": "Khaki",
+		"server": "Server",
 		"media": "Media",
 		"communication": "Communication",
 		"cloud": "Cloud",
@@ -52,6 +62,9 @@
 		"lifestyle": "Lifestyle",
 		"utilities": "Utilities",
 		"socialmedia": "Social Media",
-		"rss": "RSS"
+		"rss": "RSS",
+		"utility": "Utility",
+		"statusMessageSuccess" : "Success",
+		"statusMessageError" : "Uh oh! A problem has occurred"
 	}
 }

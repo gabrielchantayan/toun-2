@@ -19,6 +19,9 @@ const setTheme = (theme) => {
  */
 const applyTheme = () => {
     let theme = localStorage.getItem('theme') || "blackboard";
+
+    if (!themes['themes'].hasOwnProperty(theme)) theme = "blackboard";
+
     for (const [key, color] of Object.entries(themes['themes'][theme]['colors'])){
         document.documentElement.style.setProperty(`--color-${key}`, color);
     }

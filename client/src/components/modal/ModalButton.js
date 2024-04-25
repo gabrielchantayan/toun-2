@@ -1,14 +1,13 @@
-import React, { useEffect } from 'react';
 import { Icon } from '@iconify/react';
+import React from 'react';
 import Modal from './Modal';
-
 
 export default function ModalButton(props) {
 	const [showModal, setShowModal] = React.useState(false); // Password
 
 	const toggleModal = () => {
-		setShowModal(!showModal)
-	}
+		setShowModal(!showModal);
+	};
 
 	return (
 		<>

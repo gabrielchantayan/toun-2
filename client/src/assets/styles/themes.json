@@ -19,11 +19,11 @@
 			},
 			"isCustom": false
 		},
-		"espresso": {
-			"name": "Espresso",
+		"latte": {
+			"name": "Latte",
 			"colors": {
-				"background": "#E6DCD2",
-				"primary": "#21211F",
+				"background": "#efe2d2",
+				"primary": "#442f19",
 				"accent": "#625346"
 			},
 			"isCustom": false
@@ -85,16 +85,16 @@
 		"blues": {
 			"name": "Blues",
 			"colors": {
-				"background": "#2B2C56",
-				"primary": "#EFF1FC",
-				"accent": "#6677EB"
+				"background": "#153243",
+				"primary": "#F4F9E9",
+				"accent": "#EEF0EB"
 			},
 			"isCustom": false
 		},
 		"passion": {
 			"name": "Passion",
 			"colors": {
-				"background": "#f5f5f5",
+				"background": "#EAD7D7",
 				"primary": "#12005e",
 				"accent": "#8e24aa"
 			},
@@ -151,6 +151,61 @@
 				"background": "#282525",
 				"primary": "#d9d9d9",
 				"accent": "#50fbc2"
+			},
+			"isCustom": false
+		},
+		"vampire": {
+			"name": "Vampire",
+			"colors": {
+				"background": "#1A1D1A",
+				"primary": "#B6382D",
+				"accent": "#8E342C"
+			},
+			"isCustom": false
+		},
+		"forest": {
+			"name": "Forest",
+			"colors": {
+				"background": "#1F3833",
+				"primary": "#DDD5D0",
+				"accent": "#AD9A95"
+			},
+			"isCustom": false
+		},
+		"plum": {
+			"name": "Plum",
+			"colors": {
+				"background": "#1C191C",
+				"primary": "#f7e6f6",
+				"accent": "#A03E99"
+			},
+			"isCustom": false
+		},
+		"timberwolf": {
+			"name": "Timberwolf",
+			"colors": {
+				"background": "#D4D4D4",
+				"primary": "#0C1713",
+				"accent": "#4c4c4c"
+			},
+			"isCustom": false
+		},
+		"roseQuartz": {
+			"name": "Rose Quartz",
+			"colors": {
+				"background-old": "#EAC9C1",
+				"background": "#fae0d9",
+				"primary": "#30332E",
+				"accent": "#4c4c4c"
+			},
+			"isCustom": false
+		},
+		"khaki": {
+			"name": "Khaki",
+			"colors": {
+				"background": "#aaa694",
+				"primary": "#001514",
+				"accent": "#50413E"
 			},
 			"isCustom": false
 		}

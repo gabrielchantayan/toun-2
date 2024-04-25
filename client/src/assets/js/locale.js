@@ -11,16 +11,55 @@ const getLocales = () => {
     return locale['info']['locales']
 }
 
-const t = (text) => {
-    return locale[localStorage.getItem('locale') || defaultLocale ][text] || `[[${text}]]`;
+const getLocale = () => {
+    return localStorage.getItem('locale') || defaultLocale;
 }
 
+const getLangCode = () => {
+    return localStorage.getItem('locale').split('-')[0] || defaultLocale.split('-')[0];
+}
+
+
+/**
+ * Translates text to the current locale
+ * If the translation is not found, returns the original text wrapped in brackets
+ * @param {string} text - The text to translate
+ * @returns {string} The translated text
+ */
+const t = (text) => {
+    // Returns the translation of text in the current locale, or the original text wrapped in brackets if not found
+    const localeText = locale[getLocale()][text];
+
+    return localeText || `[[${text}]]`;
+}
+
+
+
+/**
+ * Translates text to the current locale without wrapping it in brackets
+ * If the translation is not found, returns the original text
+ * @param {string} text - The text to translate
+ * @returns {string} The translated text
+ */
 const tNoBracket = (text) => {
-	return locale[localStorage.getItem('locale') || defaultLocale][text] || `${text}`;
+	// Returns the translation of text in the current locale, or text itself if not found
+	// This function does NOT wrap the translated text in brackets
+	const localeText = locale[getLocale()][text];
+	
+	return localeText || text;
 };
 
+
+/**
+ * Get all locales with their names
+ * @param {string} text - Not used
+ * @returns {Object} Locales with their names
+ */
 const getLocaleMappings = (text) => {
+	// Returns an object containing all locales with their names
+	// e.g. { 'en-US': 'English', 'fr-FR': 'Français', ...}
 	return locale['info']['locales'];
 };
 
-export { t, tNoBracket, getLocaleMappings, defaultLocale, getLocales };
+
+export { t, tNoBracket, getLocaleMappings, defaultLocale, getLocales, getLocale, getLangCode };
