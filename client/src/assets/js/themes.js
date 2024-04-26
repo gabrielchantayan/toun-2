@@ -1,5 +1,6 @@
 import * as api from './api.js';
 import themes from '../styles/themes.json';
+import { t } from './locale.js';
 
 // 'color-background': colors.background,'color-text-pri': colors.primary,'color-text-acc': colors.accent
 let colOptions = ['color-background', 'color-primary', 'color-accent'];
@@ -28,44 +29,27 @@ const applyTheme = () => {
 
 };
 
-// Set theme values into variable
-// function setValue(property, value) {
-// 	if (value) {
-// 		document.documentElement.style.setProperty(`--${property}`, value);
 
-// 		const input = document.querySelector(`#${property}`);
-// 		if (input) {
-// 			value = value.replace('px', '');
-// 			input.value = value;
-// 		}
-// 	}
-// }
+/**
+ * Gets a list of themes with their names in locale
+ * @returns {Array} [[locale name, theme], [locale name, theme], [...]] Theme list
+ */
+const getThemeList = () => {
+    
+    // Create an empty array to store the theme locale map
+    let themeLocaleMap = [];
 
-// function setValueFromLocalStorage(property) {
-// 	let value = localStorage.getItem(property);
-// 	setValue(property, value);
-// }
+    // Iterate through themes
+    for (const [key, value] of Object.entries(themes['themes'])) {
 
-// // Set theme into variable for CSS
-// function setTheme(options) {
-// 	for (let option of Object.keys(options)) {
-// 		const property = option;
-// 		const value = options[option];
+        // Push localized theme name to themeLocaleMap
+        themeLocaleMap.push([key, t(`theme_${key}`)]);
+    }
 
-// 		setValue(property, value);
-// 		localStorage.setItem(property, value);
-// 	}
-// }
+    // Sort themeLocaleMap by key
+    themeLocaleMap.sort((a, b) => a[1].localeCompare(b[1]));
+    return themeLocaleMap;
 
-// async function init() {
-// 	if (colOptions.every((op) => localStorage.hasOwnProperty(op))) {
-// 		for (let opt in colOptions) {
-// 			setValueFromLocalStorage(colOptions[opt]);
-// 		}
-// 	} else {
-// 		const theme = await getCurrentThemeSettings();
-// 		setTheme(theme);
-// 	}
-// }
+}
 
-export { setTheme, applyTheme };
+export { setTheme, applyTheme, getThemeList };

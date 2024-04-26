@@ -67,6 +67,8 @@
 		"statusMessageSuccess" : "Success",
 		"statusMessageError" : "Uh oh! A problem has occurred",
 		"searchProviders" : "Search Providers",
-		"provider" : "Provider"
+		"provider" : "Provider",
+		"defaultLanguage" : "Default Language",
+		"defaultTheme" : "Default Theme"
 	}
 }

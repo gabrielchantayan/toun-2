@@ -1,5 +1,5 @@
 import { readFile, writeFile } from 'fs/promises';
-import { successHandler } from './miscUtils';
+import { successHandler } from './miscUtils.js';
 
 /**
  * Retrieves the options from config.json
