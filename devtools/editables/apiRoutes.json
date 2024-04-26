@@ -24,5 +24,32 @@
 			"primaryFunctionFile": "utils/accounts/accounts.js",
 			"primaryFunction": "login"
 		}
+	},
+	"search" : {
+		"getSearchOptions": {
+			"name": "Get search options",
+			"description": "Gets the search options file from the root directory",
+			"params": [],
+			"type": "GET",
+			"primaryFunctionFile": "utils/search/search.js",
+			"primaryFunction": "getSearchOptions"
+		}
+	},
+	"options": {
+		"getOptions": {
+			"name": "Get options",
+			"description": "Gets the options file from the root directory",
+			"params": [],
+			"type": "GET",
+			"primaryFunctionFile": "utils/misc/options.js",
+			"primaryFunction": "getOptions"
+		},
+		"updateOptions": {
+			"name": "Update options",
+			"description": "Updates the options file in the root directory",
+			"type": "POST",
+			"primaryFunctionFile": "utils/misc/options.js",
+			"primaryFunction": "updateOptions"
+		}
 	}
 }
