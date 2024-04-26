@@ -35,6 +35,7 @@
 		"theme_lime": "Citron vert",
 		"theme_white": "Blanche",
 		"theme_tron": "Tron",
+		"theme_blues": "Bleues",
 		"theme_passion": "Passion",
 		"theme_chalk": "Craie",
 		"theme_paper": "Papier",
@@ -58,6 +59,10 @@
 		"reading": "Lecture",
 		"programming": "Programmation",
 		"lifestyle": "Mode de vie",
-		"utilities": "Utilitaires"
+		"utilities": "Utilitaires",
+		"searchProviders": "Préficients de recherche",
+		"statusMessageSuccess": "Succès",
+		"statusMessageError": "Oh non! Une erreur s'est produite",
+		"provider": "Préficient"
 	}
 }

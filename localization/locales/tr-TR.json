@@ -1,8 +1,8 @@
 {
 	"info": {
-        "version" : 1,
-        "locale" : "tr-TR",
-        "name" : "Türkçe (TR)",
+		"version": 1,
+		"locale": "tr-TR",
+		"name": "Türkçe (TR)",
 		"authors": ["Gabriel Çantayan"]
 	},
 	"entries": {
@@ -33,6 +33,7 @@
 		"theme_lime": "Kireç",
 		"theme_white": "Beyaz",
 		"theme_tron": "Tron",
+		"theme_blues": "Mavi",
 		"theme_passion": "Tutku",
 		"theme_chalk": "Tebeşir",
 		"theme_paper": "Kağıt",
@@ -56,6 +57,10 @@
 		"reading": "Okuma",
 		"programming": "Programlama",
 		"lifestyle": "Yaşam tarzı",
-		"utilities": "Aletler"
+		"utilities": "Aletler",
+		"searchProviders": "Arama Sağlayıcılar",
+		"statusMessageSuccess": "Basarılı",
+		"statusMessageError": "Ah ah! Bir sorun oluştu",
+		"provider": "Sağlayıcı"
 	}
 }

@@ -65,6 +65,8 @@
 		"rss": "RSS",
 		"utility": "Utility",
 		"statusMessageSuccess" : "Success",
-		"statusMessageError" : "Uh oh! A problem has occurred"
+		"statusMessageError" : "Uh oh! A problem has occurred",
+		"searchProviders" : "Search Providers",
+		"provider" : "Provider"
 	}
 }

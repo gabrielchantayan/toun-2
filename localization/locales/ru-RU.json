@@ -1,8 +1,8 @@
 {
 	"info": {
-        "version" : 1,
-        "locale" : "ru-RU",
-        "name" : "Русский",
+		"version": 1,
+		"locale": "ru-RU",
+		"name": "Русский",
 		"authors": ["Габриэль Чантайян"]
 	},
 	"entries": {
@@ -45,6 +45,7 @@
 		"theme_latte": "Латте",
 		"theme_forest": "Лес",
 		"theme_plum": "Слива",
+		"theme_blues": "Синей",
 		"theme_roseQuartz": "Розовый кварц",
 		"theme_khaki": "Хаки",
 		"server": "Сервер",
@@ -56,6 +57,10 @@
 		"reading": "Чтение",
 		"programming": "Программирование",
 		"lifestyle": "Стиль жизни",
-		"utilities": "Утилиты"
+		"utilities": "Утилиты",
+		"searchProviders": "Провайдеры поиска",
+		"statusMessageSuccess": "Успех",
+		"statusMessageError": "Ошибка",
+		"provider": "Провайдер"
 	}
 }

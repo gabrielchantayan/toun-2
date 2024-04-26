@@ -38,6 +38,7 @@
 		"theme_passion": "Կիրք",
 		"theme_chalk": "Կավիճ",
 		"theme_paper": "Թուղթ",
+		"theme_blues": "Գապույտ",
 		"theme_neon": "Թուղթ",
 		"theme_pumpkin": "Դդում",
 		"theme_onedark": "OneDark",
@@ -58,6 +59,10 @@
 		"reading": "Ընթերցանություն",
 		"programming": "Ծրագրավորում",
 		"lifestyle": "Ապրելակերպ",
-		"utilities": "Գործիքներ"
+		"utilities": "Գործիքներ",
+		"searchProviders": "Որոնման մատակարարներ",
+		"statusMessageSuccess": "Հաջողություն",
+		"statusMessageError": "Վայ։ Սխալ է տեղի ունեցել",
+		"provider": "Մատակարար"
 	}
 }
