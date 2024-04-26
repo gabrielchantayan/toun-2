@@ -106,6 +106,29 @@ button:hover {
   filter: brightness(75%);
 }
 
+table {
+  border: 1px solid var(--color-accent);
+  border-radius: 0.4em;
+  border-spacing: 0;
+}
+table td,
+table th {
+  border-bottom: 1px solid var(--color-accent);
+  border-left: 1px solid var(--color-accent);
+  padding: 0.4em 0.6em;
+}
+table td:first-child,
+table th:first-child {
+  border-left: none;
+}
+table tr:last-child > td {
+  border-bottom: none;
+}
+table th {
+  background-color: var(--color-accent);
+  color: var(--color-background);
+}
+
 #mainContainer {
   margin: 0 20%;
 }
@@ -139,6 +162,12 @@ button:hover {
 
 .fullWidth {
   width: 100%;
+}
+
+.halfWidthContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
 }
 
 .centerContentsVH {
@@ -258,7 +287,7 @@ button:hover {
 }
 
 #modalBackground {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   -webkit-backdrop-filter: blur(5px) brightness(60%);
@@ -267,6 +296,7 @@ button:hover {
   height: 100%;
   display: flex;
   align-items: center;
+  overflow: scroll;
   justify-content: center;
   background-color: 0, 0, 0, 0.3;
 }
@@ -297,6 +327,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  max-height: 80vh;
+  overflow: scroll;
   margin: auto;
 }
 #modalBody.center {
@@ -345,6 +377,24 @@ button:hover {
   font-size: 1.4em;
   text-transform: uppercase;
   margin: 1em 0 0.2em 0;
+}
+
+.searchInput {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0px;
+  border-bottom: thin solid var(--color-accent);
+  color: var(--color-primary);
+  font-size: 0.8em;
+  height: 2em;
+  transition: all 0.4s ease;
+  width: 100%;
+  padding: 0;
+  margin-top: 2em;
+}
+.searchInput:focus {
+  border-color: var(--color-primary);
+  outline: none;
 }
 
 .themeButton {

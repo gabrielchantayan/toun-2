@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
-import { getLocales, t, tNoBracket } from '../../assets/js/locale';
-import ThemeButton from './ThemeButton';
-import themes from '../../assets/styles/themes.json';
+import React from 'react';
+import { getLocales, t } from '../../assets/js/locale';
+import LanguageSelection from '../fragments/LanguageSelection';
 
-export default function LanguageSelection(props) {
+export default function CurrentLanguageSelection(props) {
 	let selectedLang = localStorage.getItem('locale') || 'en-US';
 	let localeList = getLocales();
 	let localeSelect = [];
@@ -20,9 +19,7 @@ export default function LanguageSelection(props) {
 	return (
 		<div className='halfWidth'>
 			<h1 className='modalSectionHeader'>{t('langSettings')}</h1>
-			<select onChange={handleLanguageChange} defaultValue={selectedLang} id='themeButtonSection'>
-				{localeSelect}
-			</select>
+			<LanguageSelection handleLanguageChange={handleLanguageChange} selectedLang={selectedLang} />
 		</div>
 	);
 }

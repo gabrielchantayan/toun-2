@@ -1,9 +1,9 @@
 {
 	"applications": [
 		{
-            "name" : "applications",
-            "order" : 0,
-            "entries": [
+			"name": "applications",
+			"order": 0,
+			"entries": [
 				{
 					"order": 1,
 					"name": "Actual",
@@ -29,12 +29,12 @@
 					"url": "http://grafana.internal"
 				}
 			]
-        },
-        {
+		},
+		{
 			"name": "media",
 			"order": 1,
 			"entries": [
-                {
+				{
 					"order": 1,
 					"name": "Radarr",
 					"icon": "mdi:movie-search",
@@ -66,10 +66,10 @@
 				}
 			]
 		},
-        {
-            "name" : "server",
-            "order" : 2,
-            "entries": [
+		{
+			"name": "server",
+			"order": 2,
+			"entries": [
 				{
 					"order": 2,
 					"name": "Wiki.JS",
@@ -95,8 +95,8 @@
 					"url": "http://pihole.internal"
 				}
 			]
-        }
-    ],
+		}
+	],
 	"bookmarks": [
         
         {

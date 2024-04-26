@@ -7,11 +7,10 @@ import ApplicationSection from '../components/ApplicationSection.js';
 import { applyTheme } from '../assets/js/themes.js';
 import ModalButton from '../components/modal/ModalButton.js';
 import BookmarkSection from '../components/BookmarkSection.js';
+import SearchBar from '../components/SearchBar.js';
+import { generatePrefixMap } from '../assets/js/search.js';
 
 export default function PageOne(params) {
-	const [username, setUsername] = React.useState(''); // Username
-	const [password, setPassword] = React.useState(''); // Password
-	const [cookies, setCookie] = useCookies(['user']); // Any cookies
 
 	const [displayPage, setDisplayPage] = React.useState(false); // Any cookies
 	const [appsJSON, setAppsJSON] = React.useState({}); // Password
@@ -19,9 +18,6 @@ export default function PageOne(params) {
 	const [appSection, setAppSection] = React.useState([]); // Password
 	const [bookmarkSection, setBookmarkSection] = React.useState([]); // Password
 
-	const [locale, setLocale] = React.useState();
-
-	const [eatShit, fuckYouReact] = React.useState(false); // Any cookies
 
 	const buildAppMenu = (data) => {
 		return <ApplicationSection data={data} />;
@@ -80,15 +76,30 @@ export default function PageOne(params) {
 		setDisplayPage(true);
 	};
 
+	// Get search options
+	const getSearchOptions = async () => {
+		let ret = await api.get(['search', 'getSearchOptions']);
+
+		// Set searchOptions in localstorage to the returned data
+		localStorage.setItem('searchOptions', JSON.stringify(ret.data));
+
+		localStorage.setItem('prefixMap', JSON.stringify(generatePrefixMap(ret.data)));
+
+		// log the prefixMap
+		console.log(JSON.parse(localStorage.getItem('prefixMap')));
+	}
+
 	useEffect(() => {
 		applyTheme();
 		getApps();
+		getSearchOptions();
 		document.documentElement.lang = getLocale();
 	}, []);
 
 	return (
 		<div id='mainContainer'>
 			<div class='section'>
+				<SearchBar />
 				<p id='date'>{date()}</p>
 				<p id='greet'>{t(greet())}</p>
 			</div>
