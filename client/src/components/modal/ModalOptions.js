@@ -18,8 +18,6 @@ export default function ModalOptions() {
 					<CurrentFontSelection />
 				</div>
 			</div>
-
-			<LocaleTest />
 		</div>
 	);
 }

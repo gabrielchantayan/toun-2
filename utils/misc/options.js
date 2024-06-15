@@ -24,7 +24,7 @@ const getOptions = async () => {
  */
 const updateOptions = async (data) => {
     // Read the config.json file
-    let config = JSON.parse(await readFile('./configconfig.json'));
+    let config = JSON.parse(await readFile('./config/config.json'));
 
 
     // Update the config with the new option

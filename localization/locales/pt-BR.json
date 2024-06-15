@@ -81,9 +81,10 @@
 		"viewAvailableIcons": "Ver icones disponíveis",
 		"save": "Salvar",
 		"adminSettings": "Configurações de administrador",
-		"login" : "Entrar",
+		"login": "Entrar",
 		"socialmedia": "Redes sociais",
 		"rss": "RSS",
-		"utility": "Utilitários"
+		"utility": "Utilitários",
+		"updateAvailable": "Atualização disponível ({{old}} -> {{new}})"
 	}
 }

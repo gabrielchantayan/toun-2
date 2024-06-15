@@ -75,15 +75,16 @@
 		"theme_black": "Schwarz",
 		"fontSettings": "Schriftart",
 		"defaultFont": "Standardschriftart",
-		"editApps" : "Anwendungen bearbeiten",
-		"editBookmarks" : "Lesezeichen bearbeiten",
-		"editThemes" : "Themen bearbeiten",
-		"viewAvailableIcons" : "Alle Icons anzeigen",
-		"save" : "Speichern",
-		"adminSettings" : "Admin Einstellungen",
-		"login" : "Login",
-		"socialmedia" : "Soziale Medien",
-		"rss" : "RSS",
-		"utility" : "Werkzeuge"
+		"editApps": "Anwendungen bearbeiten",
+		"editBookmarks": "Lesezeichen bearbeiten",
+		"editThemes": "Themen bearbeiten",
+		"viewAvailableIcons": "Alle Icons anzeigen",
+		"save": "Speichern",
+		"adminSettings": "Admin Einstellungen",
+		"login": "Login",
+		"socialmedia": "Soziale Medien",
+		"rss": "RSS",
+		"utility": "Werkzeuge",
+		"updateAvailable": "Eine Aktualisierung ist verfuegbar ({{old}} -> {{new}})"
 	}
 }

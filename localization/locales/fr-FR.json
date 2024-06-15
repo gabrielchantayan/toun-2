@@ -84,6 +84,7 @@
 		"rss": "RSS",
 		"utility": "Utilitaires",
 		"defaultLanguage": "Langue par défaut",
-		"defaultTheme": "Thème par défaut"
+		"defaultTheme": "Thème par défaut",
+		"updateAvailable": "Une mise à jour est disponible ({{old}} -> {{new}})"
 	}
 }

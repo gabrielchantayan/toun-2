@@ -82,6 +82,7 @@
 		"login": "Giriş",
 		"socialmedia": "Sosyal Medya",
 		"rss": "RSS",
-		"utility": "İsletim Sistemi"
+		"utility": "İsletim Sistemi",
+		"updateAvailable": "Güncelleme mevcut ({{old}} -> {{new}})"
 	}
 }

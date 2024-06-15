@@ -1,111 +1,7 @@
-# API Documentation
+import { successHandler } from "./miscUtils.js";
+import { readFile } from 'fs/promises';
 
-
-
-## APPS
-
-### Get applications
-
-Gets a list of all applications and bookmarks
-
-**Type**: GET
-
-**Call**: `/api/apps/getApps`
-
-### Update Apps
-
-Updates apps list
-
-**Type**: POST
-
-**Call**: `/api/apps/updateApps`
-
-
-
-## ACCOUNTS
-
-### Login
-
-Logs in a user
-
-**Type**: POST
-
-**Call**: `/api/accounts/login`
-
-
-
-## SEARCH
-
-### Get search options
-
-Gets the search options file from the root directory
-
-**Type**: GET
-
-**Call**: `/api/search/getSearchOptions`
-
-**JSDoc**
-
- ``` /**
- * Gets search options
- * @returns {JSON} The search options
- */
-const getSearchOptions = async () 
- ``` 
-
-
-
-## OPTIONS
-
-### Get options
-
-Gets the options file from the root directory
-
-**Type**: GET
-
-**Call**: `/api/options/getOptions`
-
-**JSDoc**
-
- ``` /**
- * Retrieves the options from config.json
- * @function getOptions
- * @returns {JSON} The options from config.json
- */
-const getOptions = async () 
- ``` 
-
-### Update options
-
-Updates the options file in the root directory
-
-**Type**: POST
-
-**Call**: `/api/options/updateOptions`
-
-**JSDoc**
-
- ``` /**
- * Updates the option in config.json with the given key and new value.
- * @function updateOptions
- * @param {string} key The key of the option to update.
- * @param {string} option The new value to set the option to.
- * @returns {JSON} A success message.
- */
-const updateOptions = async (data) 
- ``` 
-
-### Check for updates
-
-Checks for updates to the program
-
-**Type**: GET
-
-**Call**: `/api/options/checkForUpdates`
-
-**JSDoc**
-
- ``` /**
+/**
  * Checks if a new version is available.
  *
  * @param {string} currentVersion - The current version of the application.
@@ -145,6 +41,30 @@ const checkVersion = (currentVersion, newVersion) => {
  * @property {string} version - The current version of the application.
  * @property {string} latestVersion - The latest version available on the GitHub repository.
  */
-const checkForUpdates = async () 
- ``` 
+const checkForUpdates = async () => {
+	// Log the start of the update check
+	console.log('Checking for updates...');
 
+	// Get the current version from 'package.json'
+	const version = await readFile('./package.json').then((data) => JSON.parse(data).version);
+
+    // Get the latest version from the GitHub repository
+    const latestResponse = await fetch('https://raw.githubusercontent.com/gabrielchantayan/toun-2/main/package.json');
+    const latestData = await latestResponse.json();
+    const latestVersion = latestData.version;
+
+	// Check if there is a new version available
+	const updateAvailable = checkVersion(version, latestVersion);
+
+    // Log the update status
+    (updateAvailable) ? console.log(`New version available: ${latestVersion}`) : console.log('No new version available');
+
+	// Return the update status as a success handler
+	return successHandler(true, 'checkedForUpdates', {
+		updateAvailable: updateAvailable,
+		version: version,
+		latestVersion: latestVersion,
+	});
+};
+
+export { checkForUpdates };

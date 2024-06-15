@@ -14,4 +14,10 @@ router.get('/getOptions', (req, res) => {
 router.post('/updateOptions', (req, res) => {
     return options.updateOptions(req, res);
 });
+
+// Check for updates
+// Checks for updates to the program
+router.get('/checkForUpdates', (req, res) => {
+    return options.checkForUpdates(req, res);
+});
 export default router;

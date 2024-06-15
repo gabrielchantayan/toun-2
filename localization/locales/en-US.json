@@ -83,6 +83,7 @@
 		"editBookmarks" : "Edit Bookmarks",
 		"editThemes" : "Edit Themes",
 		"viewAvailableIcons" : "Click here to see all available icons",
-		"save" : "Save"
+		"save" : "Save",
+		"updateAvailable" : "An update is available ({{old}} -> {{new}})"
 	}
 }

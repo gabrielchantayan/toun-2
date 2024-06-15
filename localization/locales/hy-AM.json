@@ -76,14 +76,15 @@
 		"editThemes": "Խմբագրել Թեմաներ",
 		"viewAvailableIcons": "Սեղմեք բոլոր պատկերակները դիտելու համար",
 		"save": "Փրկել",
-		"adminSettings" : "Ադմինիստրատորի կարգավորումներ",
-		"login" : "Մուտք գործել",
-		"socialmedia" : "Սոցիալական լրատվամիջոց",
-		"rss" : "RSS",
-		"utility" : "Օգտակար",
-		"defaultTheme" : "Կանխադրված թեմա",
-		"defaultLanguage" : "Կանխադրված լեզու",
-		"defaultFont" : "Կանխադրված տառատեսակ",
-		"fontSettings" : "Տառատեսակի կարգավորումներ"
+		"adminSettings": "Ադմինիստրատորի կարգավորումներ",
+		"login": "Մուտք գործել",
+		"socialmedia": "Սոցիալական լրատվամիջոց",
+		"rss": "RSS",
+		"utility": "Օգտակար",
+		"defaultTheme": "Կանխադրված թեմա",
+		"defaultLanguage": "Կանխադրված լեզու",
+		"defaultFont": "Կանխադրված տառատեսակ",
+		"fontSettings": "Տառատեսակի կարգավորումներ",
+		"updateAvailable": "Հասանելի է թարմացում ({{old}} -> {{new}})"
 	}
 }

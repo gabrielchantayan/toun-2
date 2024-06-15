@@ -50,6 +50,13 @@
 			"type": "POST",
 			"primaryFunctionFile": "utils/misc/options.js",
 			"primaryFunction": "updateOptions"
+		},
+		"checkForUpdates": {
+			"name": "Check for updates",
+			"description": "Checks for updates to the program",
+			"type": "GET",
+			"primaryFunctionFile": "utils/misc/update.js",
+			"primaryFunction": "checkForUpdates"
 		}
 	}
 }

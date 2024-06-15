@@ -82,6 +82,7 @@
 		"login": "Вход",
 		"socialmedia": "Социальные медиа",
 		"rss": "RSS",
-		"utility": "Утилиты"
+		"utility": "Утилиты",
+		"updateAvailable": "Доступна обновление ({{old}} -> {{new}})"
 	}
 }

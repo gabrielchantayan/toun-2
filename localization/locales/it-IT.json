@@ -84,6 +84,7 @@
 		"login": "Accesso",
 		"socialmedia": "Mezzi sociali",
 		"rss": "RSS",
-		"utility": "Utilità"
+		"utility": "Utilità",
+		"updateAvailable": "Aggiornamento disponibile ({{old}} -> {{new}})"
 	}
 }
