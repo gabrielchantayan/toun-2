@@ -13,7 +13,7 @@ services:
     volumes:
       - /path/to/config:/app/config
     environment:
-      - ADMIN_PASSWORD : "password"
+      ADMIN_PASSWORD : "password"
     ports:
       - 3080:3080
     restart: unless-stopped
