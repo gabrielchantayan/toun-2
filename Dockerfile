@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:16 as builder
+FROM --platform=linux/amd64 node:21 as builder
 
 ENV GROUP_ID=1000 \
     USER_ID=1000
@@ -19,7 +19,7 @@ RUN mkdir ./public \
     && mv ./client/build/* ./public \
     && rm -rf ./client
 
-FROM --platform=linux/amd64 node:16-alpine
+FROM --platform=linux/amd64 node:21-alpine
 
 COPY --from=builder /app /app
 
