@@ -63,6 +63,27 @@
 		"searchProviders": "Provider di ricerca",
 		"statusMessageSuccess": "Successo",
 		"statusMessageError": "Oh! Si è verificato un errore",
-		"provider": "Provider"
+		"provider": "Provider",
+		"defaultLanguage": "Lingua predefinita",
+		"defaultTheme": "Theme predefinito",
+		"font_inter": "Inter",
+		"font_geist": "Mono",
+		"font_polska": "Polska",
+		"font_svenska": "Svenska",
+		"font_deustch": "Deustch",
+		"font_calson": "Calson",
+		"theme_black": "Scuro",
+		"fontSettings": "Impostazioni font",
+		"defaultFont": "Font predefinito",
+		"editApps": "Modifica applicazioni",
+		"editBookmarks": "Modifica segnalibri",
+		"editThemes": "Modifica temi",
+		"viewAvailableIcons": "Visualizza icone disponibili",
+		"save": "Salva",
+		"adminSettings": "Impostazioni amministratore",
+		"login": "Accesso",
+		"socialmedia": "Mezzi sociali",
+		"rss": "RSS",
+		"utility": "Utilità"
 	}
 }

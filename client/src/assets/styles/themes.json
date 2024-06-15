@@ -69,7 +69,16 @@
 			"colors": {
 				"background": "#ffffff",
 				"primary": "#222222",
-				"accent": "#dddddd"
+				"accent": "#999999"
+			},
+			"isCustom": false
+		},
+		"black": {
+			"name": "Black",
+			"colors": {
+				"background": "#000000",
+				"primary": "#eeeeee",
+				"accent": "#999999"
 			},
 			"isCustom": false
 		},

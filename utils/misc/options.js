@@ -8,7 +8,7 @@ import { successHandler } from './miscUtils.js';
  */
 const getOptions = async () => {
 	// Read the config.json file
-	const config = JSON.parse(await readFile('../../config.json'));
+	const config = JSON.parse(await readFile('./config/config.json'));
 
 	// Return a success message with the options
 	return successHandler(true, null, config);
@@ -22,15 +22,16 @@ const getOptions = async () => {
  * @param {string} option The new value to set the option to.
  * @returns {JSON} A success message.
  */
-const updateOptions = async (key, option) => {
+const updateOptions = async (data) => {
     // Read the config.json file
-    let config = JSON.parse(await readFile('../../config.json'));
+    let config = JSON.parse(await readFile('./configconfig.json'));
+
 
     // Update the config with the new option
-    config[key] = option;
+    config[data.body.key] = data.body.value;
 
     // Write the updated config.json file
-    await writeFile('../../config.json', JSON.stringify(config));
+    await writeFile('./config/config.json', JSON.stringify(config));
 
     // Return a success message with the key of the updated option
     return successHandler(true, 'updatedOption');

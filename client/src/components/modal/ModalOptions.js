@@ -2,6 +2,8 @@ import React from 'react';
 import CurrentLanguageSelection from './CurrentLanguageSelection';
 import SearchOptions from '../SearchOptions';
 import ThemeButtonSection from './ThemeButtonSection';
+import CurrentFontSelection from './CurrentFontSelection';
+import LocaleTest from '../LocaleTest';
 
 export default function ModalOptions() {
 	return (
@@ -10,8 +12,14 @@ export default function ModalOptions() {
 
 			<div className='halfWidthContainer'>
 				<SearchOptions />
-				<CurrentLanguageSelection />
+
+				<div className='fullWidth'>
+					<CurrentLanguageSelection />
+					<CurrentFontSelection />
+				</div>
 			</div>
+
+			<LocaleTest />
 		</div>
 	);
 }

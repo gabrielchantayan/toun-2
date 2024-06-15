@@ -61,6 +61,27 @@
 		"searchProviders": "Провайдеры поиска",
 		"statusMessageSuccess": "Успех",
 		"statusMessageError": "Ошибка",
-		"provider": "Провайдер"
+		"provider": "Провайдер",
+		"defaultLanguage": "Язык по умолчанию",
+		"defaultTheme": "Тема по умолчанию",
+		"font_inter": "Интэр",
+		"font_geist": "Моно",
+		"font_polska": "Полска",
+		"font_svenska": "Свенска",
+		"font_deustch": "Дойч",
+		"font_calson": "Калсон",
+		"theme_black": "Черный",
+		"fontSettings": "Настройки Шрифта",
+		"defaultFont": "Шрифт по умолчанию",
+		"editApps": "Редактировать приложения",
+		"editBookmarks": "Редактировать закладки",
+		"editThemes": "Редактировать темы",
+		"viewAvailableIcons": "Посмотреть доступные иконки",
+		"save": "Сохранить",
+		"adminSettings": "Настройки Администратора",
+		"login": "Вход",
+		"socialmedia": "Социальные медиа",
+		"rss": "RSS",
+		"utility": "Утилиты"
 	}
 }

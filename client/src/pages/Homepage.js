@@ -4,20 +4,18 @@ import { date, greet } from '../assets/js/utils.js';
 import { useCookies } from 'react-cookie';
 import * as api from '../assets/js/api.js';
 import ApplicationSection from '../components/ApplicationSection.js';
-import { applyTheme } from '../assets/js/themes.js';
+import { applyFont, applyTheme } from '../assets/js/themes.js';
 import ModalButton from '../components/modal/ModalButton.js';
 import BookmarkSection from '../components/BookmarkSection.js';
 import SearchBar from '../components/SearchBar.js';
 import { generatePrefixMap } from '../assets/js/search.js';
 
 export default function PageOne(params) {
-
 	const [displayPage, setDisplayPage] = React.useState(false); // Any cookies
 	const [appsJSON, setAppsJSON] = React.useState({}); // Password
 
 	const [appSection, setAppSection] = React.useState([]); // Password
 	const [bookmarkSection, setBookmarkSection] = React.useState([]); // Password
-
 
 	const buildAppMenu = (data) => {
 		return <ApplicationSection data={data} />;
@@ -54,14 +52,13 @@ export default function PageOne(params) {
 			appSectionBuilder.push(buildAppMenu(data));
 		}
 
-		ret.bookmarks.sort((a,b) => {
+		ret.bookmarks.sort((a, b) => {
 			return a.order - b.order;
-		})
+		});
 
 		// Iterate through bookmark sections
 		for (const [key, data] of Object.entries(ret.bookmarks)) {
-
-			console.log(data)
+			console.log(data);
 			// Sort each application section entry
 			data['entries'].sort((a, b) => {
 				return a.order - b.order;
@@ -70,8 +67,10 @@ export default function PageOne(params) {
 			bookmarkSectionBuilder.push(buildBookmarkMenu(data));
 		}
 
+		localStorage.setItem('apps', JSON.stringify(ret));
+
 		setAppSection(appSectionBuilder);
-		setBookmarkSection(bookmarkSectionBuilder)
+		setBookmarkSection(bookmarkSectionBuilder);
 		setAppsJSON(ret);
 		setDisplayPage(true);
 	};
@@ -87,10 +86,11 @@ export default function PageOne(params) {
 
 		// log the prefixMap
 		console.log(JSON.parse(localStorage.getItem('prefixMap')));
-	}
+	};
 
 	useEffect(() => {
 		applyTheme();
+		applyFont();
 		getApps();
 		getSearchOptions();
 		document.documentElement.lang = getLocale();
@@ -108,10 +108,7 @@ export default function PageOne(params) {
 
 			<div className='section'>
 				<h1 className='bookmarkHeader'>{t('bookmarks')}</h1>
-				<div className="bookmarkContainer">
-
-				{bookmarkSection}
-				</div>
+				<div className='bookmarkContainer'>{bookmarkSection}</div>
 			</div>
 
 			<ModalButton />

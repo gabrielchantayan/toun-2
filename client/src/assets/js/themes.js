@@ -1,9 +1,18 @@
 import * as api from './api.js';
 import themes from '../styles/themes.json';
 import { t } from './locale.js';
+import { defaultConfig } from './utils.js';
 
 // 'color-background': colors.background,'color-text-pri': colors.primary,'color-text-acc': colors.accent
 let colOptions = ['color-background', 'color-primary', 'color-accent'];
+
+const fontMap = {
+	inter: 'InterVariable',
+	geist: 'GeistMono',
+	calson: 'LibreCaslonCondensed',
+	polska: 'PoltawskiNowy',
+	deustch: 'Texturina',
+};
 
 /**
  * Sets theme
@@ -19,9 +28,10 @@ const setTheme = (theme) => {
  * @param {String} theme Theme to apply
  */
 const applyTheme = () => {
-    let theme = localStorage.getItem('theme') || "blackboard";
 
-    if (!themes['themes'].hasOwnProperty(theme)) theme = "blackboard";
+    let theme = localStorage.getItem('theme') || defaultConfig.defaultTheme || 'blackboard';
+
+    if (!themes['themes'].hasOwnProperty(theme)) theme = defaultConfig.defaultTheme;
 
     for (const [key, color] of Object.entries(themes['themes'][theme]['colors'])){
         document.documentElement.style.setProperty(`--color-${key}`, color);
@@ -52,4 +62,20 @@ const getThemeList = () => {
 
 }
 
-export { setTheme, applyTheme, getThemeList };
+const setFont = (font) => {
+    localStorage.setItem('font', font);
+    applyFont(font);
+}
+
+const applyFont = () => {
+
+    let font = localStorage.getItem('font') || defaultConfig.defaultFont || 'inter';
+
+    document.documentElement.style.setProperty(`--font-stack`, fontMap[font]);
+}
+
+const getFonts = () => {
+    return fontMap;
+}
+
+export { setTheme, applyTheme, getThemeList, getFonts, applyFont, setFont };

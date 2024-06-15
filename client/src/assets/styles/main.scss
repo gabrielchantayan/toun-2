@@ -2,6 +2,8 @@ $iconHeight: 2em;
 $borderRadius: 0.4em;
 $fontSizeH1: 1.5em;
 $fontSizeH2: 1.2em;
+$fontSizeH3: 1em;
+$accentBorder: 0.1em solid var(--color-accent);
 
 // ███████╗░█████╗░███╗░░██╗████████╗░██████╗
 // ██╔════╝██╔══██╗████╗░██║╚══██╔══╝██╔════╝
@@ -37,7 +39,56 @@ $fontSizeH2: 1.2em;
 	src: url('fonts/InterVariable-Italic.woff2') format('woff2');
 }
 
-$mainFont: InterVariable, -apple-system, BlinkMacSystemFont, Helvetica Neue, Roboto, sans-serif;
+@font-face {
+	font-family: GeistMono;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('fonts/GeistMonoVF.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: DejaVuSansMono;
+	font-style: normal;
+	// font-weight: 100 900;
+	// font-display: swap;
+	src: url('fonts/DejaVuSansMono.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: LibreCaslonCondensed;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('fonts/LibreCaslonCondensed.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: Texturina;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('fonts/Texturina.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: PoltawskiNowy;
+	font-style: normal;
+	font-weight: 100 900;
+	font-display: swap;
+	src: url('fonts/PoltawskiNowy.woff2') format('woff2');
+}
+
+$sansFontStack: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Roboto, sans-serif;
+// $serifFontStack:  'Iowan Old Style', 'Apple Garamond', Baskerville, 'Times New Roman', 'Droid Serif', Times, 'Source Serif Pro', serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+// $monoFontStack:  DejaVuSansMono, ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono', 'Roboto Mono', 'Oxygen Mono',
+// 	'Ubuntu Monospace', 'Source Code Pro', 'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+
+$interFontStack: InterVariable, $sansFontStack;
+// $calsonFontStack: LibreCaslonCondensed, $serifFontStack;
+// $geistFontStack: GeistMono, $monoFontStack;
+
+$mainFont: var(--font-stack), $interFontStack;
 
 // ██████╗░░█████╗░░██████╗███████╗    ██╗░░██╗████████╗███╗░░░███╗██╗░░░░░
 // ██╔══██╗██╔══██╗██╔════╝██╔════╝    ██║░░██║╚══██╔══╝████╗░████║██║░░░░░
@@ -105,7 +156,7 @@ input {
 button {
 	background-color: var(--color-primary);
 	color: var(--color-background);
-	border: 0.1em solid var(--color-accent);
+	border: $accentBorder;
 	border-radius: $borderRadius;
 	padding: 0.8em 1.2em;
 	margin: 0.5em 0;
@@ -211,6 +262,7 @@ table {
 	display: flex;
 	flex-direction: row;
 	align-items: start;
+	justify-content: space-between;
 }
 
 .centerContentsVH {
@@ -224,6 +276,21 @@ table {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+}
+
+.optionSection {
+	margin-bottom: 0.5em;
+
+	.optionHeader {
+		margin: 0;
+		font-size: $fontSizeH3;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.button {
+		width: 100%;
+	}
 }
 
 // ▄▀█ █▀█ █▀█ █░░ █ █▀▀ ▄▀█ ▀█▀ █ █▀█ █▄░█ █▀
@@ -391,7 +458,7 @@ table {
 	flex-direction: column;
 	flex-wrap: wrap;
 
-	max-height: 80vh;
+	max-height: 70vh;
 	overflow: scroll;
 	margin: auto;
 
@@ -595,5 +662,73 @@ table {
 	// }
 	100% {
 		transform: translateX(90%) scaleX(0.55);
+	}
+}
+
+// █▀▄ █▀█ █▀█ █▀█ █▄▄ █▀█ ▀▄▀
+// █▄▀ █▀▄ █▄█ █▀▀ █▄█ █▄█ █░█
+
+.dropboxContainer {
+	width: 100%;
+	border: $accentBorder;
+	border-radius: 0.4em;
+	margin: 0.4em;
+
+	.dropboxHeader {
+		font-size: $fontSizeH2;
+		padding: 0.4em 0.6em;
+		font-weight: bold;
+
+		color: var(--color-accent);
+		position: relative;
+
+		&::before {
+			content: ''; /* Create a pseudo-element */
+			position: absolute; /* Position the pseudo-element absolutely */
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--color-background);
+			filter: brightness(0.5);
+			opacity: 0.4; /* Apply opacity to the pseudo-element */
+			z-index: 0;
+		}
+
+		* {
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	.dropboxContent {
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.5s ease-in-out;
+		// padding: 0.4em 0.6em;
+
+
+		// * {
+		// 	padding: 0.4em 0.6em;
+		// }
+	}
+}
+
+
+
+
+.appInfo {
+	width: 100%;
+
+	display: flex;
+  	flex-direction: row;
+  	flex-wrap: wrap;
+
+	border: $accentBorder;
+	border-radius: $borderRadius;
+
+	.floatingLabelInputContainer {
+		width: 30%;
+		padding: 0.4em 0.2em;
 	}
 }

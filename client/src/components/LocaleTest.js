@@ -1,11 +1,14 @@
-{
-	"info": {
-		"version": 1,
-		"locale": "en-US",
-		"name": "English (US)",
-		"authors": ["Gabriel Chantayan"]
-	},
-	"entries": {
+import React, { useEffect } from 'react';
+import { t } from '../assets/js/locale';
+import { getThemeList } from '../assets/js/themes';
+import { defaultConfig, setDefault } from '../assets/js/utils';
+import Button from './fragments/Button';
+import FontSelection from './fragments/FontSelection';
+import LanguageSelection from './fragments/LanguageSelection';
+import ThemeSelectionDropdown from './fragments/ThemeSelectionDropdown';
+
+
+let 	entries = {
 		"toun": "Toun",
 		"applications": "Applications",
 		"bookmarks": "Bookmarks",
@@ -78,11 +81,35 @@
 		"font_calson" : "Calson",
 		"theme_black": "Black",
 		"fontSettings" : "Font Settings",
-		"defaultFont" : "Default Font",
-		"editApps" : "Edit Applications",
-		"editBookmarks" : "Edit Bookmarks",
-		"editThemes" : "Edit Themes",
-		"viewAvailableIcons" : "Click here to see all available icons",
-		"save" : "Save"
+		"defaultFont" : "Default Font"
 	}
+
+export default function LocaleTest() {
+
+	let [e, setE] = React.useState([]);
+
+
+	/**
+	 * Handles change of the font selection dropdown
+	 *
+	 * @param {Event} e the change event of the select element
+	 */
+	const d = () => {
+		console.log('OIHIOHIOHJIOHOHIOH')
+		let dwef = []
+		for (const [key, value] of Object.entries(entries)) {
+			let f = <p>{t(key)}</p>;
+			dwef.push(f)
+		}
+
+		setE(dwef)
+	}
+
+
+
+	useEffect(() => {d();}, []);
+
+	return (
+		<div>{e}</div>
+	);
 }

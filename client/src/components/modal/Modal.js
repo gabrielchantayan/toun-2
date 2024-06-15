@@ -4,9 +4,12 @@ import { t } from '../../assets/js/locale';
 import ModalAdminLogin from './ModalAdminLogin';
 import ModalOptions from './ModalOptions';
 import ModalAdminPage from './ModalAdminPage';
+import ModalEditApps from './ModalEditApps';
+import LocaleTest from '../LocaleTest';
 
 export default function Modal(props) {
 	const [tab, setTab] = React.useState('options'); // Password
+	const [history, setHistory] = React.useState(['options']);
 
 	const handleChildElementClick = (e) => {
 		e.stopPropagation();
@@ -18,6 +21,7 @@ export default function Modal(props) {
 	};
 
 	const changeTab = (tab) => {
+		setHistory([...history, tab]);
 		setTab(tab);
 	};
 
@@ -31,6 +35,11 @@ export default function Modal(props) {
 		else props.showModalToggle();
 	};
 
+	const handleModalTabBack = () => {
+		setTab((history[history.length - 2] || 'options'));
+		setHistory(history.slice(0, -1));
+	}
+
 	return (
 		props.show && (
 			<div id='modalBackground' onClick={handleModalClose}>
@@ -42,7 +51,7 @@ export default function Modal(props) {
 							<Icon className='icon' onClick={handleModalClose} icon='mdi:close' />
 						) : (
 							<div>
-								<Icon className='icon' onClick={handleModalTabChange} icon='mdi:arrow-back' />
+								<Icon className='icon' onClick={handleModalTabBack} icon='mdi:arrow-back' />
 								<Icon className='icon' onClick={handleModalClose} icon='mdi:close' />
 							</div>
 						)}
@@ -55,9 +64,13 @@ export default function Modal(props) {
 							<ModalAdminLogin changeTab={changeTab} />
 						) : tab === 'adminSettings' ? (
 							<ModalAdminPage changeTab={changeTab} />
+						) : tab === 'editApps' ? (
+							<ModalEditApps changeTab={changeTab} />
 						) : (
 							''
 						)}
+
+						
 					</div>
 
 					<div id='modalFooter'>
@@ -68,7 +81,7 @@ export default function Modal(props) {
 							</a>
 						</div>
 
-						{tab != 'adminLogin' && tab != 'adminSettings' && (
+						{tab == 'options' && (
 							<div
 								className='modalFooterContainer'
 								onClick={() => {

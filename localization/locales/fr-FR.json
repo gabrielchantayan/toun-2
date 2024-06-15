@@ -63,6 +63,27 @@
 		"searchProviders": "Préficients de recherche",
 		"statusMessageSuccess": "Succès",
 		"statusMessageError": "Oh non! Une erreur s'est produite",
-		"provider": "Préficient"
+		"provider": "Préficient",
+		"font_inter": "Inter",
+		"font_geist": "Mono",
+		"font_polska": "Polska",
+		"font_svenska": "Svenska",
+		"font_deustch": "Deustch",
+		"font_calson": "Calson",
+		"theme_black": "Noir",
+		"fontSettings": "Police",
+		"defaultFont": "Police par défaut",
+		"editApps": "Modifier les applications",
+		"editBookmarks": "Modifier les signets",
+		"editThemes": "Modifier les thèmes",
+		"viewAvailableIcons": "Voir les icônes disponibles",
+		"save": "Enregistrer",
+		"adminSettings": "Paramètres d'administration",
+		"login": "Connexion",
+		"socialmedia": "Rèseaux sociaux",
+		"rss": "RSS",
+		"utility": "Utilitaires",
+		"defaultLanguage": "Langue par défaut",
+		"defaultTheme": "Thème par défaut"
 	}
 }

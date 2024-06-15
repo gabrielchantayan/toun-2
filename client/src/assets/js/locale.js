@@ -1,9 +1,9 @@
 // import locale from '../locale.json' assert { type: `json` };
 import locale from '../locale.json'
-import { getCookie } from './utils'
+import { defaultConfig, getCookie } from './utils'
 
 
-const defaultLocale = 'fr-FR'
+const defaultLocale = defaultConfig.defaultLocale || 'hy-AM';
 
 
 
@@ -15,8 +15,18 @@ const getLocale = () => {
     return localStorage.getItem('locale') || defaultLocale;
 }
 
+
+/**
+ * Returns the language code of the current locale
+ * e.g. 'fr' if the current locale is 'fr-FR'
+ * @returns {string} The language code of the current locale
+ */
 const getLangCode = () => {
-    return localStorage.getItem('locale').split('-')[0] || defaultLocale.split('-')[0];
+    // Returns the language code of the current locale
+    // e.g. 'fr' if the current locale is 'fr-FR'
+    return localStorage.getItem('locale')
+        ? localStorage.getItem('locale').split('-')[0]
+        : defaultLocale.split('-')[0];
 }
 
 

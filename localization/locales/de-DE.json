@@ -63,6 +63,27 @@
 		"searchProviders": "Suchprovider",
 		"statusMessageSuccess": "Erfolg!",
 		"statusMessageError": "Fehler",
-		"provider": "Provider"
+		"provider": "Provider",
+		"defaultLanguage": "Standardsprache",
+		"defaultTheme": "Standardthema",
+		"font_inter": "Inter",
+		"font_geist": "Mono",
+		"font_polska": "Polska",
+		"font_svenska": "Svenska",
+		"font_deustch": "Deustch",
+		"font_calson": "Calson",
+		"theme_black": "Schwarz",
+		"fontSettings": "Schriftart",
+		"defaultFont": "Standardschriftart",
+		"editApps" : "Anwendungen bearbeiten",
+		"editBookmarks" : "Lesezeichen bearbeiten",
+		"editThemes" : "Themen bearbeiten",
+		"viewAvailableIcons" : "Alle Icons anzeigen",
+		"save" : "Speichern",
+		"adminSettings" : "Admin Einstellungen",
+		"login" : "Login",
+		"socialmedia" : "Soziale Medien",
+		"rss" : "RSS",
+		"utility" : "Werkzeuge"
 	}
 }

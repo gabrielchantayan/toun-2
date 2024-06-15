@@ -4,12 +4,6 @@ import LanguageSelection from '../fragments/LanguageSelection';
 
 export default function CurrentLanguageSelection(props) {
 	let selectedLang = localStorage.getItem('locale') || 'en-US';
-	let localeList = getLocales();
-	let localeSelect = [];
-
-	for (const [locale, name] of Object.entries(localeList)) {
-		localeSelect.push(<option value={locale}>{name}</option>);
-	}
 
 	const handleLanguageChange = (e) => {
 		localStorage.setItem('locale', e.target.value);

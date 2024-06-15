@@ -92,6 +92,6 @@ Updates the options file in the root directory
  * @param {string} option The new value to set the option to.
  * @returns {JSON} A success message.
  */
-const updateOptions = async (key, option) 
+const updateOptions = async (data) 
  ``` 
 

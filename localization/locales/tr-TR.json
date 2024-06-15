@@ -61,6 +61,27 @@
 		"searchProviders": "Arama Sağlayıcılar",
 		"statusMessageSuccess": "Basarılı",
 		"statusMessageError": "Ah ah! Bir sorun oluştu",
-		"provider": "Sağlayıcı"
+		"provider": "Sağlayıcı",
+		"defaultLanguage": "Varsayılan Dil",
+		"defaultTheme": "Varsayılan Tema",
+		"font_inter": "Inter",
+		"font_geist": "Mono",
+		"font_polska": "Polska",
+		"font_svenska": "Svenska",
+		"font_deustch": "Deustch",
+		"font_calson": "Kalson",
+		"theme_black": "Kara",
+		"fontSettings": "Yazı Tipi Ayarları",
+		"defaultFont": "Varsayılan Yazi Tipi",
+		"editApps": "Uygulamaları düzenle",
+		"editBookmarks": "Yer imlerini düzenle",
+		"editThemes": "Tema düzenle",
+		"viewAvailableIcons": "Mevcut ikonları görüntüle",
+		"save": "Kaydet",
+		"adminSettings": "Yönetici Ayarları",
+		"login": "Giriş",
+		"socialmedia": "Sosyal Medya",
+		"rss": "RSS",
+		"utility": "İsletim Sistemi"
 	}
 }

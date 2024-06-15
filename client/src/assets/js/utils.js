@@ -1,7 +1,15 @@
+import { get, post } from './api';
 import { getLocale } from './locale';
 
 
 const protocolRegex = /^.*?:\/\//
+
+// let defaultConfig = get(['options', 'getOptions']).then((data) => data.data) || {
+// 	defaultLocale: 'fr-FR',
+// 	defaultTheme: 'blackboard',
+// };
+
+let defaultConfig = await get(['options', 'getOptions']).then((data) => data.data);
 
 // Gets a cookie
 const getCookie = (key) => {
@@ -94,4 +102,22 @@ const isValidUrl = (urlString) => {
 };
 
 
-export { getCookie, greet, makeFile, date, stripProtocol, isValidUrl };
+const getDefault = (value) => {
+	
+
+}
+
+const setDefault = async (key, value) => {
+	
+	await post(['options', 'updateOptions'], { key: key, value: value });
+
+}
+
+let init = async () => {
+	const config = await get(['options', 'getOptions']).then((data) => data.data)
+	defaultConfig = config
+}
+
+init ();
+
+export { getCookie, greet, makeFile, date, stripProtocol, isValidUrl, setDefault, defaultConfig };

@@ -22,8 +22,41 @@
   font-display: swap;
   src: url("fonts/InterVariable-Italic.woff2") format("woff2");
 }
+@font-face {
+  font-family: GeistMono;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/GeistMonoVF.woff2") format("woff2");
+}
+@font-face {
+  font-family: DejaVuSansMono;
+  font-style: normal;
+  src: url("fonts/DejaVuSansMono.ttf") format("truetype");
+}
+@font-face {
+  font-family: LibreCaslonCondensed;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/LibreCaslonCondensed.woff2") format("woff2");
+}
+@font-face {
+  font-family: Texturina;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/Texturina.ttf") format("truetype");
+}
+@font-face {
+  font-family: PoltawskiNowy;
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("fonts/PoltawskiNowy.woff2") format("woff2");
+}
 body {
-  font-family: InterVariable, -apple-system, BlinkMacSystemFont, Helvetica Neue, Roboto, sans-serif;
+  font-family: var(--font-stack), InterVariable, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Roboto, sans-serif;
   background-color: var(--color-background);
 }
 
@@ -168,6 +201,7 @@ table th {
   display: flex;
   flex-direction: row;
   align-items: start;
+  justify-content: space-between;
 }
 
 .centerContentsVH {
@@ -181,6 +215,19 @@ table th {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.optionSection {
+  margin-bottom: 0.5em;
+}
+.optionSection .optionHeader {
+  margin: 0;
+  font-size: 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.optionSection .button {
+  width: 100%;
 }
 
 .applicationHeader,
@@ -327,7 +374,7 @@ table th {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  max-height: 80vh;
+  max-height: 70vh;
   overflow: scroll;
   margin: auto;
 }
@@ -503,4 +550,51 @@ table th {
   100% {
     transform: translateX(90%) scaleX(0.55);
   }
+}
+.dropboxContainer {
+  width: 100%;
+  border: 0.1em solid var(--color-accent);
+  border-radius: 0.4em;
+  margin: 0.4em;
+}
+.dropboxContainer .dropboxHeader {
+  font-size: 1.2em;
+  padding: 0.4em 0.6em;
+  font-weight: bold;
+  color: var(--color-accent);
+  position: relative;
+}
+.dropboxContainer .dropboxHeader::before {
+  content: ""; /* Create a pseudo-element */
+  position: absolute; /* Position the pseudo-element absolutely */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-background);
+  filter: brightness(0.5);
+  opacity: 0.4; /* Apply opacity to the pseudo-element */
+  z-index: 0;
+}
+.dropboxContainer .dropboxHeader * {
+  position: relative;
+  z-index: 1;
+}
+.dropboxContainer .dropboxContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.appInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: 0.1em solid var(--color-accent);
+  border-radius: 0.4em;
+}
+.appInfo .floatingLabelInputContainer {
+  width: 30%;
+  padding: 0.4em 0.2em;
 }/*# sourceMappingURL=main.css.map */

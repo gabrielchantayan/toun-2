@@ -3,7 +3,7 @@
 		"version": 1,
 		"locale": "hy-AM",
 		"name": "Հայերեն",
-		"fallbacks": [],
+		"fallbacks": ["ru-RU", "en-US"],
 		"authors": ["Gabriel Chantayan"]
 	},
     "entries" : {
@@ -63,6 +63,27 @@
 		"searchProviders": "Որոնման մատակարարներ",
 		"statusMessageSuccess": "Հաջողություն",
 		"statusMessageError": "Վայ։ Սխալ է տեղի ունեցել",
-		"provider": "Մատակարար"
+		"provider": "Մատակարար",
+		"font_inter": "Ինտեր",
+		"font_geist": "Մոնո",
+		"font_polska": "Պոլսկա",
+		"font_svenska": "Սվենսկա",
+		"font_deustch": "Դոյճ",
+		"font_calson": "Կալսոն",
+		"theme_black": "Սև",
+		"editApps": "Խմբագրել Գործադիրներ",
+		"editBookmarks": "Խմբագրել Էջանիշներ",
+		"editThemes": "Խմբագրել Թեմաներ",
+		"viewAvailableIcons": "Սեղմեք բոլոր պատկերակները դիտելու համար",
+		"save": "Փրկել",
+		"adminSettings" : "Ադմինիստրատորի կարգավորումներ",
+		"login" : "Մուտք գործել",
+		"socialmedia" : "Սոցիալական լրատվամիջոց",
+		"rss" : "RSS",
+		"utility" : "Օգտակար",
+		"defaultTheme" : "Կանխադրված թեմա",
+		"defaultLanguage" : "Կանխադրված լեզու",
+		"defaultFont" : "Կանխադրված տառատեսակ",
+		"fontSettings" : "Տառատեսակի կարգավորումներ"
 	}
 }

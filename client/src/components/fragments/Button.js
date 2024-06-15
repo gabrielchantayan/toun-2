@@ -1,8 +1,13 @@
 import { Icon } from '@iconify/react';
 
-export default function Button({ startIcon, endIcon, label, onClick }) {
+/**
+ * 
+ * @param {{startIcon: string, endIcon: string, label: string, clickFunction: () => void}} param0 
+ * @returns 
+ */
+export default function Button({ startIcon, endIcon, label, clickFunction }) {
 	return (
-		<button onClick={onClick}>
+		<button onClick={clickFunction}>
 			{startIcon && <Icon className='startIcon' icon={startIcon} />}
 			{label}
 			{endIcon && <Icon className='endIcon' icon={endIcon} />}

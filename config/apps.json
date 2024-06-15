@@ -24,9 +24,9 @@
 				},
 				{
 					"order": 3,
-					"name": "Grafana",
+					"name": "test test",
 					"icon": "mdi:graph-line",
-					"url": "http://grafana.internal"
+					"url": "http://test.com"
 				}
 			]
 		},
