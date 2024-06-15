@@ -1,13 +1,13 @@
 import axios from 'axios';
 // import config from '../../config.json';
 
-let host = window.location.hostname;
+let host = window.location.host;
 let protocol = window.location.protocol;
-let port = ':3080';
+// let port = ':3080';
 // let port = ":80"
 
 // Base API call
-const baseURL = `${protocol}//${host}${port}/api/`;
+const baseURL = `${protocol}//${host}/api/`;
 
 axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
